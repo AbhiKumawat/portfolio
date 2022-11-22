@@ -1,11 +1,13 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useState } from "react";
 import { Canvas } from "@react-three/fiber";
-import './style.css';
+import './style.scss';
 import {
   CubeCamera,
   Environment,
   OrbitControls,
   PerspectiveCamera,
+  Sparkles,
+  Cloud 
 } from "@react-three/drei";
 import {
   EffectComposer,
@@ -18,6 +20,7 @@ import { Car } from "./Car";
 import { Rings } from "./Rings";
 import { Boxes } from "./Boxes";
 import { FloatingGrid } from "./FloatingGrid";
+import AboutMe from "./components/AboutMe";
 
 function CarShow(){
   return (
@@ -59,9 +62,20 @@ function CarShow(){
         castShadow
         shadow-bias={-0.0001}
       />
-
+      <fog attach={"fog"} args={["#202030", 5, 25]} />
+     
       <Ground/>   
       <FloatingGrid />
+      <Sparkles count={200} scale={[20, 20, 10]} size={1} speed={0.01} />
+      <fog attach={"fog"} args={["#202030", 5, 25]} />
+
+            <Cloud
+                opacity={0.1}
+                speed={0.1}
+                width={30}
+                depth={0.1}
+                segments={40}
+            />
       <Boxes />
       <Rings />
       
@@ -86,12 +100,34 @@ function CarShow(){
 }
 
 function App(){
+  const [navSelected, setNavSelected] = useState(null);
   return (
-  <Suspense fallback={null}>
-    <Canvas shadows>
-      <CarShow />
-    </Canvas>
-  </Suspense>
+  <>
+    < main>
+        <Suspense fallback={null}>
+          <Canvas shadows>
+            <CarShow />
+          </Canvas>
+        </Suspense>
+        <div className="header">
+          <h1>WELCOME TO MY PORTFOLIO</h1>
+        </div>
+
+        <div className="navigation">
+          <button onClick={() => setNavSelected(AboutMe)}>About</button>
+          <button>Experience</button>
+          <button>Projects</button>
+          <button>Contact Info</button>
+        </div>
+
+        <div className={`content-holder ${navSelected ? "show-content" : ""}`}>
+        <div className="content-main">
+          <button className="close-btn" onClick={() => setNavSelected(null)}>CLOSE</button>
+          {navSelected}
+        </div>
+      </div>
+      </main>
+  </>
   );
 }
 
