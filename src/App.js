@@ -7,7 +7,7 @@ import {
   OrbitControls,
   PerspectiveCamera,
   Sparkles,
-  Cloud 
+  // Cloud 
 } from "@react-three/drei";
 import {
   EffectComposer,
@@ -21,6 +21,7 @@ import { Rings } from "./Rings";
 import { Boxes } from "./Boxes";
 import { FloatingGrid } from "./FloatingGrid";
 import AboutMe from "./components/AboutMe";
+import Experience from './components/Experience';
 
 function CarShow(){
   return (
@@ -62,12 +63,12 @@ function CarShow(){
         castShadow
         shadow-bias={-0.0001}
       />
-      <fog attach={"fog"} args={["#202030", 5, 25]} />
+      {/* <fog attach={"fog"} args={["#202030", 5, 25]} /> */}
      
       <Ground/>   
       <FloatingGrid />
       <Sparkles count={200} scale={[20, 20, 10]} size={1} speed={0.01} />
-      <fog attach={"fog"} args={["#202030", 5, 25]} />
+      {/* <fog attach={"fog"} args={["#202030", 5, 25]} />
 
             <Cloud
                 opacity={0.1}
@@ -75,7 +76,7 @@ function CarShow(){
                 width={30}
                 depth={0.1}
                 segments={40}
-            />
+            /> */}
       <Boxes />
       <Rings />
       
@@ -115,7 +116,7 @@ function App(){
 
         <div className="navigation">
           <button onClick={() => setNavSelected(AboutMe)}>About</button>
-          <button>Experience</button>
+          <button onClick={() => setNavSelected(Experience)}>Experience</button>
           <button>Projects</button>
           <button>Contact Info</button>
         </div>
