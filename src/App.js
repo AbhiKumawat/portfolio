@@ -3,8 +3,8 @@ import { Canvas } from "@react-three/fiber";
 import './style.scss';
 
 import {
-  CubeCamera,
-  Environment,
+  // CubeCamera,
+  // Environment,
   OrbitControls,
   PerspectiveCamera,
   Sparkles,
@@ -18,8 +18,8 @@ import {
 } from "@react-three/postprocessing";
 import { BlendFunction } from "postprocessing";
 import { Ground } from "./Ground";
-import { Car } from "./Car";
-import { Rings } from "./Rings";
+// import { Car } from "./Car";
+// import { Rings } from "./Rings";
 import { Boxes } from "./Boxes";
 import { FloatingGrid } from "./FloatingGrid";
 import AboutMe from "./components/AboutMe";
@@ -50,14 +50,14 @@ function CarShow() {
 
       <color args={[0, 0, 0]} attach="background" />
 
-      <CubeCamera resolution={256} frames={Infinity}>
+      {/* <CubeCamera resolution={256} frames={Infinity}>
         {(texture) => (
           <>
             <Environment map={texture} />
             <Car />
           </>
         )}
-      </CubeCamera>
+      </CubeCamera> */}
 
       <spotLight
         color={[1, 0.25, 0.7]}
@@ -92,7 +92,7 @@ function CarShow() {
                 segments={40}
             /> */}
       <Boxes />
-      <Rings />
+      {/* <Rings /> */}
 
       <EffectComposer>
         {/* <DepthOfField focusDistance={0.0035} focalLength={0.01} bokehScale={3} height={480} /> */}
