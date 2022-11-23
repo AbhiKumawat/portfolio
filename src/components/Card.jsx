@@ -1,79 +1,41 @@
 import React from "react"
 import './card.scss';
-
+// import contactPNG from "../contact_me.png";
 const Card = () => {
     return (
-        <div className="wrapper">
+        <div className="wrapper card-bg">
+            <div className="productSpecifications">
+                <h1 className="animate__animated animate__fadeIn">GET IN TOUCH WITH ME</h1>           
+            </div>  
             <div className="overviewInfo">
                 
                 <div className="productinfo">
-                <div className="grouptext">
-                    <h3>PLATFORM</h3>
-                    <p>PS5</p>
-                </div>
-                <div className="grouptext">
-                    <h3>RELEASE</h3>
-                    <p>Fall 2020</p>
-                </div>
-                <div className="grouptext">
-                    <h3>PRICE</h3>
-                    <p>$50</p>
-                </div>
-                
-                
-                <div className="productImage">
-                    <img src="https://i.imgur.com/ckSgzLQ.png" alt=""/>
-                </div>
-                
-            </div>
-                
+                    <div className="grouptext">
+                            <h3>NAME</h3>
+                            <p>Abhimanyu Kumawat</p>
+                    </div>
+                    <div className="grouptext">
+                        <h3>EMAIL</h3>
+                        <p><a href = "mailto: abhimanyuxkumawat@gmail.com">Gmail</a></p>
+                    </div>
+                    <div className="grouptext">
+                        <h3>Graduated From</h3>
+                        <p>New Jersey Institute of Technology</p>
+                    </div>
+                    <div className="grouptext">
+                        <h3>YEARS OF EXPERIENCE</h3>
+                        <p>4</p>
+                    </div>
+                    <div className="grouptext">
+                        <h3>Location</h3>
+                        <p>NJ</p>
+                    </div>
+                    <div className="grouptext">
+                        <h3>Social</h3>
+                        <p class="para-text"><a href="https://www.linkedin.com/in/abhimanyu-kumawat-37358a155/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+                    </div>
+                </div>    
             </div> 
-    
-            <div className="productSpecifications">
-                <h1> Dual Sense </h1>
-                <p> DualSense also adds a build-in microphone array, which will enable players to easily chat with friends without a headset... </p>
-                
-                {/* <div className="productFeatures">
-                <div className="feature">
-                    <div className="featureIcon">
-                    </div>
-                    <div className="featureText">
-                    <p> <strong>Futuristic</strong></p>
-                    <p>Design</p>
-                    </div>
-                </div>
-                <div className="feature">
-                    <div className="featureIcon">
-                    </div>
-                    <div className="featureText">
-                    <p> <strong>Built-in</strong></p>
-                    <p>Microphone</p>
-                    </div>
-                </div>
-                <div className="feature">
-                    <div className="featureIcon">
-                    </div>
-                    <div className="featureText">
-                    <p> <strong>Haptic</strong></p>
-                    <p>Feedback</p>
-                    </div>
-                    </div>
-                <div className="feature">
-                    <div className="featureIcon">
-                    </div>
-                    <div className="featureText">
-                    <p> <strong>Fast charge</strong></p>
-                    <p>USB-C port</p>
-                    </div>
-                </div>
-                </div> */}
-                
-                <div className="checkoutButton">
-                    <button className="preorder">
-                        <p>Read More</p>
-                    </button> 
-                </div>
-            </div>  
         </div>
     )
 }

@@ -6,7 +6,7 @@ const AboutMe = () => {
         <>
             <div className="scroll">
                 <h1 className="animate__animated animate__fadeIn">About Me</h1>
-                <div className="para-text">
+                <div className="para-text card-bg">
                     <img style={{width: "25%"}} src={ppf} alt="profile"/>
 
                     <p>

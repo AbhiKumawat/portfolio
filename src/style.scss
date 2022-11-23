@@ -106,7 +106,7 @@ main {
             .scroll {
                 display: block;
                 height: 100%;
-                overflow-y: auto;
+                // overflow-y: auto;
             }
 
             .center {
@@ -123,6 +123,12 @@ main {
                 justify-content: flex-start;
                 align-items: flex-start;
                 width: 1500px;
+            }
+
+            .card-bg {
+                background-image: linear-gradient(176deg, #0c0013, #0c0c0c);
+                height: 100%;
+                overflow: scroll;
             }
 
             h1 {

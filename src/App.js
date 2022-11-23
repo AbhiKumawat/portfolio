@@ -1,14 +1,13 @@
 import React, { Suspense, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import './style.scss';
-
 import {
   // CubeCamera,
   // Environment,
   OrbitControls,
   PerspectiveCamera,
   Sparkles,
-  Html
+  Html,
   // Cloud 
 } from "@react-three/drei";
 import {
@@ -46,7 +45,7 @@ function CarShow() {
         maxPolarAngle={1.45}
       />
       {/* Camera of the project */}
-      <PerspectiveCamera makeDefault fov={50} position={[3, 2, 5]} />
+      <PerspectiveCamera makeDefault fov={90} position={[3, 3, 6]} />
 
       <color args={[0, 0, 0]} attach="background" />
 
