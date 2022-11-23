@@ -16,7 +16,7 @@ const Card = () => {
                     </div>
                     <div className="grouptext">
                         <h3>EMAIL</h3>
-                        <p><a href = "mailto: abhimanyuxkumawat@gmail.com">Gmail</a></p>
+                        <p><a href="mailto: abhimanyuxkumawat@gmail.com" target="_blank" rel="noopener noreferrer">Gmail</a></p>
                     </div>
                     <div className="grouptext">
                         <h3>Graduated From</h3>
@@ -32,7 +32,7 @@ const Card = () => {
                     </div>
                     <div className="grouptext">
                         <h3>Social</h3>
-                        <p class="para-text"><a href="https://www.linkedin.com/in/abhimanyu-kumawat-37358a155/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+                        <p><a href="https://www.linkedin.com/in/abhimanyu-kumawat-37358a155/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
                     </div>
                 </div>    
             </div> 
