@@ -5,7 +5,7 @@ const Resume = () => {
     return (
         <>
             <div className="scroll center">
-                <img style={{height: "100%"}} className="animate__animated animate__fadeIn" src={resume} alt="" />
+                <a href={resume}  target="_blank" rel="noreferrer">Resume</a>
             </div>
         </>
     )

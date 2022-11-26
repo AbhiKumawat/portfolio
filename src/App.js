@@ -23,8 +23,7 @@ import { Boxes } from "./Boxes";
 import { FloatingGrid } from "./FloatingGrid";
 import AboutMe from "./components/AboutMe";
 import Contact from "./components/Contact";
-import Resume from "./components/Resume";
-// import Experience from './components/Experience';
+import resume from "./Resume_2023.png";
 
 function Loader() {
   return <Html center>
@@ -132,7 +131,7 @@ function App() {
           <button onClick={() => setNavSelected(AboutMe)}>About</button>
           <button onClick={() => setNavSelected(Contact)}>Contact Me</button>
           {/* <button>Projects</button> */}
-          <button onClick={() => setNavSelected(Resume)}>Resume</button>
+          <button><a href={resume}  target="_blank" rel="noreferrer">Resume</a></button>
         </div>
 
         <div className={`content-holder ${navSelected ? "show-content" : ""}`}>
